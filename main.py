@@ -8,23 +8,23 @@ nr_letters = int(input("How many letters would you like in your password?\n"))
 nr_symbols = int(input(f"How many symbols should your password have?\n"))
 nr_numbers = int(input(f"How many numbers should your password have?\n"))
 
-password_list = []
+password = []
 
 for item in range(1, nr_letters + 1):
-  password_list.append(random.choice(letters))
+  password.append(random.choice(letters))
 
 for item in range(1, nr_symbols + 1):
-  password_list += random.choice(symbols)
+  password += random.choice(symbols)
 
 for item in range(1, nr_numbers + 1):
-  password_list += random.choice(numbers)
+  password += random.choice(numbers)
 
-print(password_list)
-random.shuffle(password_list)
-print(password_list)
+print(password)
+random.shuffle(password)
+print(password)
 
-password = ""
-for item in password_list:
-  password += item
+passwordFinal = ""
+for item in password:
+  passwordFinal += item
 
-print(f"Your suggested Python password is: {password}")
+print(f"Your suggested Python password is: {passwordFinal}")
